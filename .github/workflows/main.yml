@@ -2,14 +2,17 @@ name: Main
 
 on: pull_request
 
-# permissions:
-#   issues: write
+permissions:
+  issues: write
 
 jobs:
   example:
     runs-on: ubuntu-latest
     steps:
       - uses: htunnicliff/replace-comment-html@v1
+        env:
+          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
         with:
+          token: ${{ env.GITHUB_TOKEN }}
           selector: "h1"
           html: "<h1>See you tomorrow!</h1>"
