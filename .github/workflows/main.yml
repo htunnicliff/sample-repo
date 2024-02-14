@@ -9,7 +9,7 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - uses: htunnicliff/replace-comment-html@main
+      - uses: htunnicliff/replace-comment-html@v1
         with:
           selector: "h1"
-          html: "<h1>See you later!</h1>"
+          html: "<h1>See you tomorrow!</h1>"
