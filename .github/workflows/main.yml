@@ -1,11 +1,6 @@
 name: Main
 
 on:
-  workflow_dispatch:
-    inputs:
-      issue-number:
-        description: "Issue number"
-        required: true
   pull_request:
     branches:
       - master
@@ -16,6 +11,5 @@ jobs:
     steps:
       - uses: htunnicliff/replace-comment-html@main
         with:
-          issue-number: ${{ github.event.inputs.issue-number || github.event.pull_request.number }}
           selector: "h1"
-          html: "<h1>hello <span>world</span></h1>"
+          html: "<h1>hello <span>worlds</span></h1>"
