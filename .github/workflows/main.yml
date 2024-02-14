@@ -11,4 +11,4 @@ jobs:
       - uses: htunnicliff/replace-comment-html@main
         with:
           selector: "h1"
-          html: "<h1>hello <span>worlds</span></h1>"
+          html: "<h1>hello <span>world</span></h1>"
